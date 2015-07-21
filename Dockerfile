@@ -14,13 +14,13 @@ VOLUME /flickr /config
 RUN locale-gen en_US.UTF-8 && \
 
 # Use baseimage-docker's init system
-CMD ["/sbin/my_init"]
+CMD ["/sbin/my_init"] && \
 
 # Install folders2flickr
 
-RUN pip install --user git+https://github.com/richq/folders2flickr.git
+pip install --user git+https://github.com/richq/folders2flickr.git && \
 
-RUN cp ~/.local/share/folders2flickr/uploadr.ini.sample ~/.uploadr.ini
+cp ~/.local/share/folders2flickr/uploadr.ini.sample ~/.uploadr.ini && \
 
 # clean up
 cd / && \
