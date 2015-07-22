@@ -21,10 +21,10 @@ usermod -g 100 nobody && \
 # Install python
 
 apt-get update && \
-sudo apt-get -y --force-yes install python-pip python-dev build-essential && \
-sudo pip install --upgrade pip && \
-sudo pip install --upgrade virtualenv && \
-sudo apt-get -y --force-yes install git && \
+apt-get -y --force-yes install git python-pip python-dev build-essential && \
+pip install --upgrade pip && \
+pip install --upgrade virtualenv && \
+
 
 # Install folders2flickr
 
